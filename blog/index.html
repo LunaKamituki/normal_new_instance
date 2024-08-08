@@ -43,14 +43,11 @@
             
         </style>
         <script>
-            function checkPassword(){
-                if(document.getElementById('word').value == "yuki"){
-                    document.cookie = "yuki=True; path=/;";
+            function check(){
+                if(document.getElementById('check').value == 'yuki'){
+                    document.cookie = 'yuki=True; path=/;';
                 }else{
-                    let req = new XMLHttpRequest();
-                    req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
-                    req.open("GET", "/answer?q="+document.getElementById('word').value);
-                    req.send();
+                    document.getElementById('result').textContent = 'ERROR';
                 }
             }
         </script>
@@ -69,12 +66,17 @@
                 </nav>
             </div>
             <div id="main">
+                <h1>刑法について</h1>
+
+
                 <p>日本の刑法は「罪刑法定主義」です。</p>
                 <p>罪刑法定主義とは、「法で定められていなければ罪を犯したことにはならない」考え方です。</p>
                 <p>甲が乙を鋭利な凶器用いて殺害したとしても、法で殺人について記述が一切なければ犯罪犯したとは言えません（道徳的・倫理的・人道的な観点から善くないですが）。</p>
                 <p>どなたの本かは伏せさせて頂きますが、刑法各論及び総論読んだ素人書いたものですので、間違っている箇所等あるかもしれません。</p>
-                <input id="word" type="text"><input type="button" onClick=checkPassword()" value="Check">
-                <div id="info"></div>
+                <p>日本の刑法は何主義ですか？</p>
+                <input id="check" type="text">
+                <input type="button" onClick=check()" value="Check">
+                <div id="result"></div>
             </div>
         </div>
     </body>
