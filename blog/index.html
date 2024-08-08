@@ -45,6 +45,7 @@
         <script>
             function check(){
                 if(document.getElementById('check').value == 'yuki'){
+
                     document.cookie = 'yuki=True; path=/;';
                 }else{
                     document.getElementById('result').textContent = 'ERROR';
@@ -72,9 +73,8 @@
                 <p>罪刑法定主義とは、「法で定められていなければ罪を犯したことにはならない」考え方です。</p>
                 <p>甲が乙を鋭利な凶器用いて殺害したとしても、法で殺人について記述が一切なければ犯罪犯したとは言えません（道徳的・倫理的・人道的な観点から善くないですが）。</p>
                 <p>どなたの本かは伏せさせて頂きますが、刑法各論及び総論読んだ素人書いたものですので、間違っている箇所等あるかもしれません。</p>
-
-
-                <p>日本の刑法は何主義ですか？</p>
+                <h3>おさらい</h3>
+                <p>Q. 日本の刑法は何主義ですか？</p>
                 <input id="check" type="text">
                 <input type="button" onClick=check()" value="Check">
                 <div id="result"></div>
