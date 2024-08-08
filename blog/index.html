@@ -43,13 +43,20 @@
             
         </style>
         <script>
+            var doc = document;
+            
+            function getElm(id){
+                return doc.getElementById(id)
+            }
+            
             function check(){
-                if(document.getElementById('check').value == 'yuki'){
-
-                    document.cookie = 'yuki=True; path=/;';
+                if(getElm('check').value == '罪刑法定主義'){
+                    getElm('result').textContent = '正解';
+                    doc.cookie = 'yuki=True; path=/;';
                 }else{
-                    document.getElementById('result').textContent = 'ERROR';
+                    doc.getElementById('result').textContent = '不正解';
                 }
+                return
             }
         </script>
     </head>
