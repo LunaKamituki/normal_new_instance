@@ -54,8 +54,7 @@
                     getElm('result').textContent = '正解';
                     doc.cookie = 'yuki=True; path=/;';
                 }else{
-                    doc.getElementById('result').textContent = '不正解';
-                    doc.cookie = '';
+                    getElm('result').textContent = '不正解';
                 }
                 return
             }
