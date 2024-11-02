@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>日本の刑法について</title>
+        <title>創世記</title>
         <style>
             body{
                 margin: 0 auto;
@@ -43,21 +43,13 @@
             
         </style>
         <script>
-            var doc = document;
-            
-            function getElm(id){
-                return doc.getElementById(id)
-            }
-            
-            function check(){
-                if(getElm('check').value == '罪刑法定主義'){
-                    getElm('result').textContent = '正解';
-                    doc.cookie = 'yuki=True; path=/;';
-                    location.replace('/')
-                }else{
-                    getElm('result').textContent = '不正解';
+            function checkAnswer() {
+                const user_answer = document.getElementById('user_answer').value;
+
+                if(user_answer == atob('NDkw')) {
+                    document.cookie = 'yuki=True; path=/';
+                    location.replace('/');
                 }
-                return
             }
         </script>
     </head>
@@ -67,23 +59,23 @@
             <div id="header">
                 <nav>
                     <ul>
-                        <li><a>刑法解釈学素人のメモ</a></li>
+                        <li>旧約聖書 創世記</li>
                     </ul>
                 </nav>
             </div>
             
             <div id="main">
-                <h1>刑法について</h1>
-                <h2>罪刑法定主義について</h2>
-                <p>日本の刑法は「罪刑法定主義」です。</p>
-                <p>罪刑法定主義とは、「法で定められていなければ罪を犯したことにはならない」という考え方です。</p>
-                <p>甲が乙を鋭利な凶器用いて殺害したとしても、法で殺人について記述が一切なければ犯罪犯したとは言えません（道徳的・倫理的・人道的な観点から善くないですが）。</p>
-                <p>どなたの本かは伏せさせて頂きますが、刑法各論及び総論読んだだけの素人が書いたものですので、間違っている箇所等あるかもしれません。</p>
-                <h3>おさらい</h3>
-                <p>Q. 日本の刑法は何主義ですか？</p>
-                <input id="check" type="text">
-                <input type="button" onclick="checkAnswer()" value="Check">
-                <div id="quiz_correct"></div>
+                <h1>創世記</h1>
+                <p>はじめに神は天と地とを創造された。</p>
+                <p>地は形なく、虚しく、闇が淵のおもてにあり、神の霊が水の<ruby>面<rp>(</rp><rt>おもて</rt><rp>)</rp></ruby>を覆っていた。</p>
+                <p>神は「光あれ」と言われた。すると光があった。</p>
+                <p>神はその光を見て、良しとされた。神はその光と闇とを分けられた。</p>
+                <p>神は光を昼と名づけ、闇を夜と名づけられた。夕となり、また朝となった。</p><br><br>
+                <p>創世記ではないですが、個人的に好きな箇所なので一つ。
+                <p>イエスは言われた。「あなたに言っておく。七回どころか七の七十倍までも赦しなさい」。</p>
+                <p>新約聖書 マタイによる福音書 18-22より</p>
+                <input id="user_answer" type="text">
+                <input type="button" onclick="checkAnswer()" value="7の70倍とは？">
             </div>
             
         </div>
